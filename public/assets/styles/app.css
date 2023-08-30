@@ -55,3 +55,26 @@ header nav.right-nav ul li .currency img {
 header nav.right-nav ul li .currency span {
   margin-right: 10px;
 }
+
+/********************/
+/*** main content ***/
+/********************/
+main #benefits {
+  background-color: #F2F2F2;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main #benefits .benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+main #benefits .benefit span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

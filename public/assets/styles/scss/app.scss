@@ -76,3 +76,30 @@ header {
     }
   }
 }
+
+/********************/
+/*** main content ***/
+/********************/
+main {
+  #benefits {
+    background-color: #F2F2F2;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+
+      span {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
