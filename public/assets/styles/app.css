@@ -341,3 +341,35 @@ main .recently-bought .recently-bought-items .item-sale .description .price {
 main .recently-bought .recently-bought-items .item-sale .description .old-price {
   text-decoration-line: strikethrough;
 }
+main .newsletter {
+  background: #000;
+  height: 75px;
+  padding: 20px 118px;
+  display: flex;
+  justify-content: space-between;
+}
+main .newsletter h2 {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+main .newsletter .input-container {
+  position: relative;
+}
+main .newsletter .input-container .input-field {
+  padding: 9px 35px 9px 17px;
+  height: 35px;
+  width: 354px;
+}
+main .newsletter .input-container .input-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icons/ant-design_right-outlined.svg");
+  background-size: cover;
+  cursor: pointer;
+}
