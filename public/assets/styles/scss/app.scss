@@ -454,3 +454,66 @@ main {
     }
   }
 }
+
+/**************/
+/*** footer ***/
+/**************/
+footer {
+  padding: 40px;
+
+  .links {
+    display: flex;
+    margin-bottom: 29px;
+
+    h4 {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .internal {
+      &:not(:last-child) {
+        padding-right: 20px;
+
+        h4, a {
+          padding: 10px;
+        }
+      }
+    }
+
+    .external {
+      margin-left: 112px;
+
+      h4 {
+        padding: 10px;
+      }
+
+      .social-medias {
+        margin-bottom: 10px;
+      }
+
+      .social-medias, .gateways {
+        padding: 0px 10px;
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      padding-left: 10px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
