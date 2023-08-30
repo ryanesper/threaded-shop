@@ -10,6 +10,10 @@ body {
   font-family: "Montserrat";
 }
 
+button {
+  cursor: pointer;
+}
+
 /**************/
 /*** header ***/
 /**************/
@@ -59,50 +63,49 @@ header nav.right-nav ul li .currency span {
 /********************/
 /*** main content ***/
 /********************/
-main #benefits {
+main .benefits {
   background-color: #F2F2F2;
   min-height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-main #benefits .benefit {
+main .benefits .benefit {
   display: flex;
   align-items: center;
   gap: 15px;
   text-decoration: none;
 }
-main #benefits .benefit span {
+main .benefits .benefit span {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-main #hero {
+main .hero {
   display: flex;
   align-items: center;
   padding: 0px 24px;
-  height: 650px;
+  min-height: 650px;
   background: url("../images/Rectangle17.png") left/50% no-repeat, url("../images/Rectangle.png") right/50% no-repeat;
 }
-main #hero button.previous, main #hero button.next {
+main .hero button.previous, main .hero button.next {
   height: 50px;
   width: 50px;
   border: none;
   background-color: transparent;
-  cursor: pointer;
 }
-main #hero button.previous {
+main .hero button.previous {
   background-image: url("../images/ant-design_left-outlined.png");
 }
-main #hero button.next {
+main .hero button.next {
   background-image: url("../images/ant-design_right-outlined.png");
 }
-main #hero .hero-content {
+main .hero .hero-content {
   margin-left: auto;
   text-align: center;
 }
-main #hero .hero-content button.shop-now {
+main .hero .hero-content button.shop-now {
   padding: 15px 30px;
   text-align: center;
   font-size: 36px;
@@ -110,4 +113,36 @@ main #hero .hero-content button.shop-now {
   border: none;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+main .site-wide-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+  padding: 45px 68px;
+}
+main .site-wide-details p {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+main .site-wide-details p span {
+  font-size: 18px;
+  font-weight: 800;
+}
+main .site-wide-details button {
+  border: none;
+  background: #000;
+  padding: 10px 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
 }
