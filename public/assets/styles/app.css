@@ -78,3 +78,36 @@ main #benefits .benefit span {
   font-weight: 400;
   line-height: normal;
 }
+main #hero {
+  display: flex;
+  align-items: center;
+  padding: 0px 24px;
+  height: 650px;
+  background: url("../images/Rectangle17.png") left/50% no-repeat, url("../images/Rectangle.png") right/50% no-repeat;
+}
+main #hero button.previous, main #hero button.next {
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+main #hero button.previous {
+  background-image: url("../images/ant-design_left-outlined.png");
+}
+main #hero button.next {
+  background-image: url("../images/ant-design_right-outlined.png");
+}
+main #hero .hero-content {
+  margin-left: auto;
+  text-align: center;
+}
+main #hero .hero-content button.shop-now {
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  border: none;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

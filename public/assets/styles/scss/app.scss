@@ -102,4 +102,46 @@ main {
       }
     }
   }
+
+  #hero {
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+    height: 650px;
+    background:
+      url("../images/Rectangle17.png") left / 50% no-repeat,
+      url("../images/Rectangle.png") right / 50% no-repeat;
+
+
+    button.previous, button.next {
+      height: 50px;
+      width: 50px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    button.previous {
+      background-image: url("../images/ant-design_left-outlined.png");
+    }
+
+    button.next {
+      background-image: url("../images/ant-design_right-outlined.png");
+    }
+
+    .hero-content {
+      margin-left: auto;
+      text-align: center;
+
+      button.shop-now {
+        padding: 15px 30px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        border: none;
+        background: #FFF;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
 }
