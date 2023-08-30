@@ -227,4 +227,46 @@ main {
       }
     }
   }
+
+  .trending {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 1040px;
+    padding: 40px 190px 62px 190px;
+
+    h3 {
+      padding: 10px 20px 20px 20px;
+      font-size: 36px;
+    }
+
+    p {
+      padding: 10px 20px 20px 20px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .trending-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .item {
+        padding: 20px;
+        flex-basis: calc(25%);
+      }
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+
+      button {
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 1px solid #000;
+      }
+    }
+  }
 }

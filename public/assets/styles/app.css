@@ -184,3 +184,38 @@ main .vip-exclusive div button {
   text-transform: uppercase;
   margin: auto;
 }
+main .trending {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 1040px;
+  padding: 40px 190px 62px 190px;
+}
+main .trending h3 {
+  padding: 10px 20px 20px 20px;
+  font-size: 36px;
+}
+main .trending p {
+  padding: 10px 20px 20px 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+main .trending .trending-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .trending .trending-items .item {
+  padding: 20px;
+  flex-basis: 25%;
+}
+main .trending .tags {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+main .trending .tags button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #000;
+}
