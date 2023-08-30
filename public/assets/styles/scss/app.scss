@@ -144,4 +144,41 @@ main {
       }
     }
   }
+
+  .newsletter {
+    background: #000;
+    height: 75px;
+    padding: 20px 118px;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      color: #FFF;
+      font-size: 32px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .input-container{
+      position: relative;
+
+      .input-field {
+        padding: 9px 35px 9px 17px;
+        height: 35px;
+        width: 354px
+      }
+
+      .input-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/icons/ant-design_right-outlined.svg');
+        background-size: cover;
+        cursor: pointer;
+      }
+    }
+  }
 }
