@@ -111,3 +111,35 @@ main #hero .hero-content button.shop-now {
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+main .recently-bought {
+  padding: 40px;
+}
+main .recently-bought h3 {
+  padding: 10px 20px 20px 20px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+}
+main .recently-bought .recently-bought-items {
+  display: flex;
+}
+main .recently-bought .recently-bought-items .item {
+  padding: 20px;
+}
+main .recently-bought .recently-bought-items .item .description {
+  font-size: 14px;
+}
+main .recently-bought .recently-bought-items .item .description p {
+  font-weight: 400;
+}
+main .recently-bought .recently-bought-items .item .description strong {
+  font-weight: 600;
+}
+main .recently-bought .recently-bought-items .item-sale .description .price {
+  color: #C1272D;
+  width: 58px;
+  display: inline-block;
+}
+main .recently-bought .recently-bought-items .item-sale .description .old-price {
+  text-decoration-line: strikethrough;
+}

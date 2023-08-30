@@ -144,4 +144,49 @@ main {
       }
     }
   }
+
+  .recently-bought {
+    padding: 40px;
+    
+    h3 {
+      padding: 10px 20px 20px 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+    }
+
+    .recently-bought-items {
+      display: flex;
+      
+      .item {
+        padding: 20px;
+
+        .description {
+          font-size: 14px;
+
+          p {
+            font-weight: 400;
+          }
+
+          strong {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .item-sale {
+        .description {
+          .price {
+            color: #C1272D;
+            width: 58px;
+            display: inline-block;
+          }
+
+          .old-price {
+            text-decoration-line: strikethrough;
+          }
+        }
+      }
+    }
+  }
 }
