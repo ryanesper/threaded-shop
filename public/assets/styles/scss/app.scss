@@ -183,4 +183,48 @@ main {
       text-transform: uppercase;
     }
   }
+  
+  .vip-exclusive {
+    min-height: 75px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 13.54%, #000 40.10%, #000 100%), url("../images/vip-exclusive-bg.jpg"), lightgray 50% / cover no-repeat;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    div {
+      display: flex;
+      width: 100%;
+      padding: 0px 118px;
+
+      h3, p {
+        color: #FFF;
+      }
+
+      h3 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-right: 24px;
+      }
+  
+      p {
+        width: 354px;
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      button {
+        border: none;
+        padding: 10px 20px;
+        background: #FFF;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: auto;
+      }
+    }
+  }
 }
