@@ -1,0 +1,74 @@
+[
+  {
+    "id": "42142",
+    "brand": "Brand X",
+    "color": "red",
+    "name": "dress-1",
+    "price": {
+      "current": 38,
+      "old": null
+    },
+    "description": "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit",
+    "quantity": 10,
+    "size": "small",
+    "imageName": "dress-1.jpg"
+  },
+  {
+    "id": "42143",
+    "brand": "Brand X",
+    "color": "black",
+    "name": "bag",
+    "price": {
+      "current": 5.77,
+      "old": 7.34
+    },
+    "description": "Chevron Flap Crossbody Bag",
+    "quantity": 10
+    ,
+    "size": "small",
+    "imageName": "bag.jpg"
+  },
+  {
+    "id": "42144",
+    "brand": "Brand Y",
+    "color": "white",
+    "name": "scarf",
+    "price": {
+      "current": 29,
+      "old": 39
+    },
+    "description": "Manilla Tan Multi Plaid Oversized Fringe Scarf",
+    "quantity": 10,
+    "size": "large",
+    "imageName": "scarf.jpg"
+  },
+  {
+    "id": "42145",
+    "brand": "Brand Z",
+    "color": "black",
+    "name": "dress-2",
+    "price": {
+      "current": 45.99,
+      "old": null
+    },
+    "description": "Diamante Puff Sleeve Dress - Black",
+    "quantity": 10
+    ,
+    "size": "medium",
+    "imageName": "dress-2.jpg"
+  },
+  {
+    "id": "42146",
+    "brand": "Brand Z",
+    "color": "black",
+    "name": "dress-3",
+    "price": {
+      "current": 69,
+      "old": 99.95
+    },
+    "description": "Banneth Open Front Formal Dress in Black",
+    "quantity": 10,
+    "size": "large",
+    "imageName": "dress-3.jpg"
+  }
+]

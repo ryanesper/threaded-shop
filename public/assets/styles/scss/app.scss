@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@import "globals";
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0px;
@@ -26,6 +28,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 
   nav {
     ul {
@@ -75,6 +81,73 @@ header {
 
         span {
           margin-right: 10px;
+        }
+      }
+
+      li .cart-overview {
+        display: none;
+        width: 300px;
+        background-color: #FFF;
+        position: absolute;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        left: -650%;
+        top: 20px;
+        padding: 30px;
+        z-index: 999;
+        max-height: 568px;
+        overflow: auto;
+
+        .item {
+          .item-details {
+            display: flex;
+            padding: 10px;
+  
+            img {
+              padding: 0px 10px 30px 0px;
+              max-width: 100%;
+              height: auto;
+            }
+
+            .description {
+              strong {
+                font-size: 14px;
+              }
+              
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: darkgray;
+            margin: 20px 0px;
+          }
+        }
+
+        hr {
+          margin: 10px 0px;
+        }
+
+        .checkout {
+          div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 12px;
+
+            strong:first-child {
+              text-decoration: underline;
+            }
+          }
+
+          button {
+            padding: 20px 30px;
+            font-size: 12px;
+          }
         }
       }
     }
@@ -136,13 +209,10 @@ main {
       margin-left: auto;
       text-align: center;
 
-      button.shop-now {
-        padding: 15px 30px;
-        text-align: center;
+      button {
         font-size: 36px;
+        padding: 15px 30px;
         font-weight: 600;
-        border: none;
-        background: #FFF;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       }
     }
@@ -173,13 +243,14 @@ main {
   .instagram-posts {
     height: 550px;
     text-align: center;
+    background-color: #F2F2F2;;
 
     h3, p {
       padding: 10px 20px 20px 20px;
     }
     
     h3 {
-      margin-top: 40px;
+      padding-top: 40px;
       font-size: 36px;
       font-weight: 800;
     }
@@ -195,20 +266,6 @@ main {
       gap: 49px;
       justify-content: center;
       margin-bottom: 31px;
-    }
-
-    button {
-      border: none;
-      padding: 10px 20px;
-      color: #FFF;
-      background: #000;
-      text-align: center;
-      font-family: Montserrat;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      text-transform: uppercase;
     }
   }
 
@@ -245,12 +302,6 @@ main {
       }
 
       button {
-        border: none;
-        padding: 10px 20px;
-        background: #FFF;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: uppercase;
         margin: auto;
       }
     }
@@ -356,19 +407,6 @@ main {
         line-height: normal;
         margin-bottom: 43px;
       }
-  
-      button {
-        padding: 10px 20px;
-        border: none;
-        color: #000;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: uppercase;
-      }
     }
   }
 
@@ -384,34 +422,51 @@ main {
 
     .recently-bought-items {
       display: flex;
+      justify-content: space-around;
       
       .item {
         padding: 20px;
 
         .description {
+          display: flex;
+          flex-direction: column;
           font-size: 14px;
+          width: 225px;
+          height: 75px;
 
           p {
             font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: auto;
           }
+          
+          .price {
+            height: 25px;
+            display: flex;
+            align-items: center;
 
-          strong {
-            font-weight: 600;
+            strong {
+              font-weight: 600;
+            }
           }
         }
-      }
 
-      .item-sale {
-        .description {
-          .price {
-            color: #C1272D;
-            width: 58px;
-            display: inline-block;
+        &.item-sale {
+          .description {
+            .current-price {
+              color: #C1272D;
+              width: 58px;
+              display: inline-block;
+            }
+  
+            .old-price {
+              text-decoration-line: strikethrough;
+            }
           }
+        }
 
-          .old-price {
-            text-decoration-line: strikethrough;
-          }
+        button {
+          margin-top: 10px;
         }
       }
     }

@@ -1,4 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.primary-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #FFF;
+  background: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0px;
@@ -24,6 +53,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 header nav ul {
   display: flex;
@@ -58,6 +91,57 @@ header nav.right-nav ul li .currency img {
 }
 header nav.right-nav ul li .currency span {
   margin-right: 10px;
+}
+header nav.right-nav ul li .cart-overview {
+  display: none;
+  width: 300px;
+  background-color: #FFF;
+  position: absolute;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  left: -650%;
+  top: 20px;
+  padding: 30px;
+  z-index: 999;
+  max-height: 568px;
+  overflow: auto;
+}
+header nav.right-nav ul li .cart-overview .item .item-details {
+  display: flex;
+  padding: 10px;
+}
+header nav.right-nav ul li .cart-overview .item .item-details img {
+  padding: 0px 10px 30px 0px;
+  max-width: 100%;
+  height: auto;
+}
+header nav.right-nav ul li .cart-overview .item .item-details .description strong {
+  font-size: 14px;
+}
+header nav.right-nav ul li .cart-overview .item .item-details .description p {
+  font-size: 12px;
+}
+header nav.right-nav ul li .cart-overview .item::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: darkgray;
+  margin: 20px 0px;
+}
+header nav.right-nav ul li .cart-overview hr {
+  margin: 10px 0px;
+}
+header nav.right-nav ul li .cart-overview .checkout div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+header nav.right-nav ul li .cart-overview .checkout div strong:first-child {
+  text-decoration: underline;
+}
+header nav.right-nav ul li .cart-overview .checkout button {
+  padding: 20px 30px;
+  font-size: 12px;
 }
 
 /********************/
@@ -105,13 +189,10 @@ main .hero .hero-content {
   margin-left: auto;
   text-align: center;
 }
-main .hero .hero-content button.shop-now {
-  padding: 15px 30px;
-  text-align: center;
+main .hero .hero-content button {
   font-size: 36px;
+  padding: 15px 30px;
   font-weight: 600;
-  border: none;
-  background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 main .site-wide-details {
@@ -136,12 +217,13 @@ main .site-wide-details p span {
 main .instagram-posts {
   height: 550px;
   text-align: center;
+  background-color: #F2F2F2;
 }
 main .instagram-posts h3, main .instagram-posts p {
   padding: 10px 20px 20px 20px;
 }
 main .instagram-posts h3 {
-  margin-top: 40px;
+  padding-top: 40px;
   font-size: 36px;
   font-weight: 800;
 }
@@ -155,19 +237,6 @@ main .instagram-posts .posts {
   gap: 49px;
   justify-content: center;
   margin-bottom: 31px;
-}
-main .instagram-posts button {
-  border: none;
-  padding: 10px 20px;
-  color: #FFF;
-  background: #000;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
 }
 main .vip-exclusive {
   min-height: 75px;
@@ -199,12 +268,6 @@ main .vip-exclusive div p {
   font-weight: 600;
 }
 main .vip-exclusive div button {
-  border: none;
-  padding: 10px 20px;
-  background: #FFF;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
   margin: auto;
 }
 main .trending {
@@ -297,18 +360,6 @@ main .new-arrivals div p {
   line-height: normal;
   margin-bottom: 43px;
 }
-main .new-arrivals div button {
-  padding: 10px 20px;
-  border: none;
-  color: #000;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-}
 main .recently-bought {
   padding: 40px;
 }
@@ -320,26 +371,41 @@ main .recently-bought h3 {
 }
 main .recently-bought .recently-bought-items {
   display: flex;
+  justify-content: space-around;
 }
 main .recently-bought .recently-bought-items .item {
   padding: 20px;
 }
 main .recently-bought .recently-bought-items .item .description {
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
+  width: 225px;
+  height: 75px;
 }
 main .recently-bought .recently-bought-items .item .description p {
   font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: auto;
 }
-main .recently-bought .recently-bought-items .item .description strong {
+main .recently-bought .recently-bought-items .item .description .price {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
+main .recently-bought .recently-bought-items .item .description .price strong {
   font-weight: 600;
 }
-main .recently-bought .recently-bought-items .item-sale .description .price {
+main .recently-bought .recently-bought-items .item.item-sale .description .current-price {
   color: #C1272D;
   width: 58px;
   display: inline-block;
 }
-main .recently-bought .recently-bought-items .item-sale .description .old-price {
+main .recently-bought .recently-bought-items .item.item-sale .description .old-price {
   text-decoration-line: strikethrough;
+}
+main .recently-bought .recently-bought-items .item button {
+  margin-top: 10px;
 }
 main .newsletter {
   background: #000;

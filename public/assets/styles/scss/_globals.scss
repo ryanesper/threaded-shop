@@ -1,0 +1,28 @@
+.primary-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #FFF;
+  background: #000;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}

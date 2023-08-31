@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="./assets/scripts/cart.js"></script>
   <link rel="stylesheet" href="assets/styles/app.css">
 </head>
 <body>
@@ -22,7 +24,20 @@
     <nav class="right-nav">
       <ul>
         <li><a href="#"><img src="./assets/images/icons/bx_bx-user.svg"></a></li>
-        <li><a href="#"><img src="./assets/images/icons/bx_bx-shopping-bag.svg"></a></li>
+        <li style="position: relative;">
+          <a class="my-cart" href="#"><img src="./assets/images/icons/bx_bx-shopping-bag.svg"></a>
+          <div class="cart-overview">
+            <div class="items">
+              <div class="checkout">
+                <div>
+                  <strong>My Bag (<span class="total-qty">0</span>)</strong>
+                  <strong>$<span class="total-price">0</span></strong>
+                </div>
+                <a href="#" class="secondary-button w-100">Begin Checkout</a>
+              </div>
+            </div>
+          </div>
+        </li>
         <li><a href="#"><img src="./assets/images/icons/bx_bx-heart.svg"></a></li>
         <li><a href="#"><img src="./assets/images/icons/bx_bx-support.svg"></a></li>
         <li><a href="#"><img src="./assets/images/icons/bx_bx-search.svg"></a></li>
@@ -51,7 +66,7 @@
       <div class="hero-content">
         <img src="./assets/images/hero 1.png" alt="">
         <br>
-        <button class="shop-now">SHOP NOW</button>
+        <button class="primary-button">SHOP NOW</button>
       </div>
       <button class="next"><img src="./assets/images/ant-design_right-outlined.png" alt=""></button>
     </section>
@@ -74,14 +89,14 @@
         <small>on orders above $200</small>
       </div>
       <div class="detail">
-        <button>check out all site-wide deals</button>
+        <button class="secondary-button">check out all site-wide deals</button>
     </section>
     
     <section class="vip-exclusive">
       <div>
         <h3>black friday exclusive</h3>
         <p>free shipping on all orders for VIP 2 and up!</p>
-        <button>shop now</button>
+        <button class="primary-button">shop now</button>
     </section>
 
     <section class="trending">
@@ -89,14 +104,14 @@
       <p>See what everyone’s wearing right now</p>
 
       <div class="trending-items">
-        <div class="item"><img src="./assets/images/sections/trendings/trending-1.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-2.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-3.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-4.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-5.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-6.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-7.jpg" alt=""></div>
-        <div class="item"><img src="./assets/images/sections/trendings/trending-8.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-11.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/boots.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-33.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-44.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-55.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-66.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-77.jpg" alt=""></div>
+        <div class="item"><img src="./assets/images/products/dress-88.jpg" alt=""></div>
       </div>
 
       <div class="tags">
@@ -112,53 +127,12 @@
       <div>
         <h2>NEW ARRIVALS</h2>
         <p>Get ready for the holidays with us!</p>
-        <button class="shop-now">SHOP NOW</button>
+        <button class="primary-button">SHOP NOW</button>
     </section>
       
     <section class="recently-bought">
       <h3>Recently Bought</h3>
       <div class="recently-bought-items">
-        <div class="item">
-          <img src="./assets/images/recently-bough/rb-1.jpg" alt="">
-          <div class="description">
-            <p>Manilla Tan Multi Plaid Oversized Fringe Scarf</p>
-            <strong class="price">$38</strong>
-          </div>
-        </div>
-        <div class="item item-sale">
-          <img src="./assets/images/recently-bough/rb-1.jpg" alt="">
-          <div class="description">
-            <p>Chevron Flap Crossbody Bag</p>
-            <div>
-              <strong class="price">$5.77</strong>
-              <strong class="old-price">$7.34</strong>
-            </div>
-          </div>
-        </div>
-        <div class="item item-sale">
-          <img src="./assets/images/recently-bough/rb-1.jpg" alt="">
-          <div class="description">
-            <p>Manilla Tan Multi Plaid Oversized Fringe Scarf</p>
-            <strong class="price">$29</strong>
-            <strong class="old-price">$39</strong>
-          </div>
-        </div>
-        <div class="item">
-          <img src="./assets/images/recently-bough/rb-1.jpg" alt="">
-          <div class="description">
-            <p>Diamante Puff Sleeve Dress - Black</p>
-            <strong class="price">$45.99</strong>
-          </div>
-        </div>
-        <div class="item item-sale">
-          <img src="./assets/images/recently-bough/rb-1.jpg" alt="">
-          <div class="description">
-            <p>Banneth Open Front Formal Dress in Black</p>
-            <strong class="price">$69</strong>
-            <strong class="old-price">$99.95</strong>
-          </div>
-        </div>
-
       </div>
     </section>
 
@@ -172,7 +146,7 @@
         <img src="./assets/images/instagram-posts/ig-post-4.jpg" alt="">
         <img src="./assets/images/instagram-posts/ig-post-5.jpg" alt="">
       </div>
-      <button>VIEW ALL POST</button>
+      <button class="secondary-button">VIEW ALL POST</button>
     </section>
 
     <section class="newsletter">
@@ -237,6 +211,6 @@
     </div>
   </footer>
 
-  <script src="assets/scripts/app.js"></script>
+  <script type="module" src="assets/scripts/app.js"></script>
 </body>
 </html>
