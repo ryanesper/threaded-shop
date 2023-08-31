@@ -206,6 +206,8 @@ const Cart = (() => {
       return
     }
 
+    document.querySelectorAll(".cart-overview .items div[id]").forEach(el => el.remove()) 
+
     for(const item of myCart) {
       addCartOverviewItem(item)
     }
@@ -242,6 +244,7 @@ const Cart = (() => {
     updateCartOverviewTotalPrice()
     updateCheckoutTotalQuantiy()
     updateCheckoutTotalPrice()
+    populateCartOverview()
   }
 
   return {
