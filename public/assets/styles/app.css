@@ -1,4 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
+  font-family: "Montserrat";
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .primary-button {
   display: inline-block;
   border: none;
@@ -26,21 +43,6 @@
 
 .w-100 {
   width: 100%;
-}
-
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  color: #000000;
-}
-
-body {
-  font-family: "Montserrat";
-}
-
-button {
-  cursor: pointer;
 }
 
 /**************/
@@ -153,6 +155,7 @@ main .benefits {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 main .benefits .benefit {
   display: flex;
@@ -171,7 +174,7 @@ main .hero {
   align-items: center;
   padding: 0px 24px;
   min-height: 650px;
-  background: url("../images/Rectangle17.png") left/50% no-repeat, url("../images/Rectangle.png") right/50% no-repeat;
+  background: linear-gradient(0.25turn, rgba(255, 255, 255, 0) 20%, #eee9da, rgba(255, 255, 255, 0)), url("../images/Rectangle17.png") left/60% no-repeat, url("../images/Rectangle.png") right/50% no-repeat;
 }
 main .hero button.previous, main .hero button.next {
   height: 50px;
@@ -201,6 +204,7 @@ main .site-wide-details {
   align-items: center;
   min-height: 150px;
   padding: 45px 68px;
+  flex-wrap: wrap;
 }
 main .site-wide-details p {
   font-size: 32px;
@@ -215,9 +219,10 @@ main .site-wide-details p span {
   font-weight: 800;
 }
 main .instagram-posts {
-  height: 550px;
+  min-height: 550px;
   text-align: center;
   background-color: #F2F2F2;
+  padding: 40px 60px 60px 60px;
 }
 main .instagram-posts h3, main .instagram-posts p {
   padding: 10px 20px 20px 20px;
@@ -236,11 +241,12 @@ main .instagram-posts .posts {
   display: flex;
   gap: 49px;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 31px;
 }
 main .vip-exclusive {
   min-height: 75px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 13.54%, #000 40.1%, #000 100%), url("../images/vip-exclusive-bg.jpg"), lightgray 50%/cover no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 13.54%, #000 40.1%, #000 100%), url("../images/vip-exclusive-bg.jpg"), lightgray 50%/cover no-repeat;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -249,6 +255,7 @@ main .vip-exclusive div {
   display: flex;
   width: 100%;
   padding: 0px 118px;
+  flex-wrap: wrap;
 }
 main .vip-exclusive div h3, main .vip-exclusive div p {
   color: #FFF;
@@ -274,14 +281,14 @@ main .trending {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 1040px;
-  padding: 40px 190px 62px 190px;
+  min-height: 1040px;
+  padding: 40px;
 }
 main .trending h3 {
   padding: 10px 20px 20px 20px;
   font-size: 36px;
 }
-main .trending p {
+main .trending p:not(.item p) {
   padding: 10px 20px 20px 20px;
   font-size: 14px;
   font-weight: 400;
@@ -290,14 +297,25 @@ main .trending .trending-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1060px;
+  margin: 0px auto;
 }
 main .trending .trending-items .item {
   padding: 20px;
-  flex-basis: 25%;
+  flex-basis: 265px;
+}
+main .trending .trending-items .item p {
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
 }
 main .trending .tags {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
 }
 main .trending .tags button {
@@ -338,6 +356,7 @@ main .new-arrivals::after {
 }
 main .new-arrivals div {
   padding: 0px 148px;
+  z-index: 3;
 }
 main .new-arrivals div h2 {
   color: #FFF;
@@ -371,7 +390,8 @@ main .recently-bought h3 {
 }
 main .recently-bought .recently-bought-items {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main .recently-bought .recently-bought-items .item {
   padding: 20px;
@@ -409,7 +429,7 @@ main .recently-bought .recently-bought-items .item button {
 }
 main .newsletter {
   background: #000;
-  height: 75px;
+  min-height: 75px;
   padding: 20px 118px;
   display: flex;
   justify-content: space-between;
@@ -598,4 +618,82 @@ footer .copyright span {
   padding-left: 10px;
   font-size: 12px;
   font-weight: 400;
+}
+
+/**************/
+/*** footer ***/
+/**************/
+@media screen and (max-width: 992px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main .hero {
+    background: url("../images/Rectangle17.png");
+    background-size: cover;
+    background-position-x: center;
+  }
+  main .hero .hero-content {
+    margin: auto;
+  }
+  main .benefits a {
+    padding: 5px 10px;
+  }
+  main .site-wide-details .detail:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  main .vip-exclusive div {
+    justify-content: center;
+    text-align: center;
+    padding: 10px 118px;
+    gap: 10px;
+  }
+  main .new-arrivals {
+    margin: auto;
+    text-align: center;
+  }
+  main .new-arrivals::before {
+    background-position-x: left;
+  }
+  main .new-arrivals::after {
+    background-position-x: right;
+  }
+  main .new-arrivals div {
+    padding: 0px;
+    margin: auto;
+  }
+  main .newsletter {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .links, footer .copyright {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  footer .links .internal, footer .copyright .internal {
+    padding: 0px;
+  }
+  footer .links .external, footer .copyright .external {
+    margin: auto;
+  }
+  footer .links .external div, footer .copyright .external div {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 512px) {
+  main .new-arrivals::before {
+    background-position-x: -200%;
+  }
+  main .new-arrivals::after {
+    background-position-x: 200%;
+  }
 }
