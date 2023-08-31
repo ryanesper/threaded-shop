@@ -439,6 +439,116 @@ main .newsletter .input-container .input-icon {
   background-size: cover;
   cursor: pointer;
 }
+main .cart {
+  padding: 40px;
+}
+main .cart .head {
+  margin-bottom: 30px;
+}
+main .cart .head div {
+  display: flex;
+  justify-content: space-between;
+}
+main .cart .content {
+  display: flex;
+}
+main .cart .content .items {
+  flex: 2;
+  margin-right: 40px;
+}
+main .cart .content .items .label strong:last-child {
+  float: right;
+}
+main .cart .content .items .label::after, main .cart .content .items .item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 10px 0px;
+}
+main .cart .content .items .item > div {
+  display: flex;
+  justify-content: space-between;
+}
+main .cart .content .items .item > div img {
+  padding: 0px 20px;
+}
+main .cart .content .items .item > div > div {
+  display: flex;
+  flex-direction: column;
+}
+main .cart .content .items .item > div > div p {
+  margin-bottom: 5px;
+}
+main .cart .content .items .item > div > div .actions {
+  bottom: 0px;
+  width: 100%;
+  margin-top: auto;
+}
+main .cart .content .items .item > div > div .actions a:not(:last-child) {
+  margin-right: 20px;
+}
+main .cart .content .items .item > div > strong {
+  margin-left: auto;
+}
+main .cart .content .order-summary {
+  flex: 1;
+}
+main .cart .content .order-summary > strong {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+main .cart .content .order-summary .estimates {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 2px;
+}
+main .cart .content .order-summary .estimates > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .cart .content .order-summary .estimates > div p, main .cart .content .order-summary .estimates > div strong {
+  flex-basis: 50%;
+  padding: 5px 0px;
+}
+main .cart .content .order-summary .estimates > div :is(p, strong):nth-child(even) {
+  text-align: right;
+}
+main .cart .content .order-summary .estimates > div:last-child p {
+  text-align: center;
+  flex-basis: 100%;
+  color: red;
+}
+main .cart .content .order-summary .estimates > div:first-child::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: lightgray;
+  margin: 20px 0px;
+}
+main .cart .content .order-summary button, main .cart .content .order-summary .estimates {
+  margin-top: 10px;
+}
+main .cart .content .order-summary button {
+  border-radius: 5px;
+}
+main .cart .content .order-summary button:not(:last-child) {
+  padding: 20px;
+}
+main .cart .content .order-summary button:last-child {
+  border: 1px solid black;
+  font-weight: normal;
+}
+main .cart .foot {
+  padding: 15px 0px;
+}
+main .cart .foot div {
+  margin-top: 15px;
+}
 
 /**************/
 /*** footer ***/

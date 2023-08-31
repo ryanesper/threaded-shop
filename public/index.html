@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-  <script src="./assets/scripts/cart.js"></script>
+  <script src="./assets//scripts/modules/cart.js"></script>
+  <script src="./assets/scripts/modules/product.js"></script>
   <link rel="stylesheet" href="assets/styles/app.css">
 </head>
 <body>
@@ -19,13 +20,13 @@
       </ul>
     </nav>
 
-    <img src="./assets/images/logo.png" height="auto">
+    <a href="/"><img src="./assets/images/logo.png" height="auto"></a>
 
     <nav class="right-nav">
       <ul>
         <li><a href="#"><img src="./assets/images/icons/bx_bx-user.svg"></a></li>
         <li style="position: relative;">
-          <a class="my-cart" href="#"><img src="./assets/images/icons/bx_bx-shopping-bag.svg"></a>
+          <a class="my-cart" href="/checkout"><img src="./assets/images/icons/bx_bx-shopping-bag.svg"></a>
           <div class="cart-overview">
             <div class="items">
               <div class="checkout">
@@ -33,7 +34,7 @@
                   <strong>My Bag (<span class="total-qty">0</span>)</strong>
                   <strong>$<span class="total-price">0</span></strong>
                 </div>
-                <a href="#" class="secondary-button w-100">Begin Checkout</a>
+                <a href="/checkout" class="secondary-button w-100">Begin Checkout</a>
               </div>
             </div>
           </div>
@@ -211,6 +212,9 @@
     </div>
   </footer>
 
-  <script type="module" src="assets/scripts/app.js"></script>
+  <script src="./assets/scripts/app.js"></script>
+  <script>
+    Product.getProducts()
+  </script>
 </body>
 </html>

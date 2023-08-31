@@ -1,6 +1,6 @@
 [
   {
-    "id": "42142",
+    "id": 42142,
     "brand": "Brand X",
     "color": "red",
     "name": "dress-1",
@@ -11,10 +11,11 @@
     "description": "Festive Looks Rust Red Ribbed Velvet Long Sleeve Bodysuit",
     "quantity": 10,
     "size": "small",
-    "imageName": "dress-1.jpg"
+    "imageName": "dress-1.jpg",
+    "styleNumber": "BGAA-GW001"
   },
   {
-    "id": "42143",
+    "id": 42143,
     "brand": "Brand X",
     "color": "black",
     "name": "bag",
@@ -26,10 +27,11 @@
     "quantity": 10
     ,
     "size": "small",
-    "imageName": "bag.jpg"
+    "imageName": "bag.jpg",
+    "styleNumber": "BGAA-GW0012"
   },
   {
-    "id": "42144",
+    "id": 42144,
     "brand": "Brand Y",
     "color": "white",
     "name": "scarf",
@@ -40,10 +42,11 @@
     "description": "Manilla Tan Multi Plaid Oversized Fringe Scarf",
     "quantity": 10,
     "size": "large",
-    "imageName": "scarf.jpg"
+    "imageName": "scarf.jpg",
+    "styleNumber": "BGAA-GW003"
   },
   {
-    "id": "42145",
+    "id": 42145,
     "brand": "Brand Z",
     "color": "black",
     "name": "dress-2",
@@ -55,10 +58,11 @@
     "quantity": 10
     ,
     "size": "medium",
-    "imageName": "dress-2.jpg"
+    "imageName": "dress-2.jpg",
+    "styleNumber": "BGAA-GW004"
   },
   {
-    "id": "42146",
+    "id": 42146,
     "brand": "Brand Z",
     "color": "black",
     "name": "dress-3",
@@ -69,6 +73,7 @@
     "description": "Banneth Open Front Formal Dress in Black",
     "quantity": 10,
     "size": "large",
-    "imageName": "dress-3.jpg"
+    "imageName": "dress-3.jpg",
+    "styleNumber": "BGAA-GW005"
   }
 ]

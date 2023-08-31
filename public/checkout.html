@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="./assets//scripts/modules/cart.js"></script>
+  <script src="./assets/scripts/modules/product.js"></script>
+  <link rel="stylesheet" href="assets/styles/app.css">
+</head>
+<body>
+  <header>
+    <nav class="left-nav">
+      <ul>
+        <li><a href="/">WOMEN</a></li>
+        <li><a href="#">PLUS</a></li>
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">ACCESSORIES</a></li>
+      </ul>
+    </nav>
+
+    <a href="/"><img src="./assets/images/logo.png" height="auto"></a>
+
+    <nav class="right-nav">
+      <ul>
+        <li><a href="#"><img src="./assets/images/icons/bx_bx-user.svg"></a></li>
+        <li style="position: relative;">
+          <a class="my-cart" href="/checkout"><img src="./assets/images/icons/bx_bx-shopping-bag.svg"></a>
+          <div class="cart-overview">
+            <div class="items">
+              <div class="checkout">
+                <div>
+                  <strong>My Bag (<span class="total-qty">0</span>)</strong>
+                  <strong>$<span class="total-price">0</span></strong>
+                </div>
+                <a href="/checkout" class="secondary-button w-100">Begin Checkout</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#"><img src="./assets/images/icons/bx_bx-heart.svg"></a></li>
+        <li><a href="#"><img src="./assets/images/icons/bx_bx-support.svg"></a></li>
+        <li><a href="#"><img src="./assets/images/icons/bx_bx-search.svg"></a></li>
+        <li>
+          <div class="currency">
+            <a href="#"><img src="./assets/images/icons/US Flag.svg"></a>
+            <span>USD $</span>
+            <a href="#"><img src="./assets/images/icons/ant-design_down-outlined.svg"></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cart checkout">
+      <div class="head">
+        <div>
+          <h3>SHOPPING BAG (<span>0</span>)</h3>
+          <p>Need help? +1-562-926-5672</p>
+        </div>
+        <div>
+          <p><a href="#">Sign in</a> to sync your bag across your devices.</p>
+          <a href="#">Let's chat</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="items">
+          <div class="label">
+            <strong>ITEM</strong>
+            <strong>PRICE</strong>
+          </div>
+        </div>
+        <div class="order-summary">
+          <strong>ORDER SUMMARY</strong>
+          <div class="estimates">
+            <div>
+              <p>Subtotal (<span class="total-qty"></span>)</p>
+              <p>$<span class="total-price"></span></p>
+              <p>FREE shipping! <a href="#">details</a></p>
+              <p>$0.00</p>
+            </div>
+            <div>
+              <strong>Estimated Total</strong>
+              <strong>$<span class="grand-total-price"></span></strong>
+              <p>VAT included!</p>
+            </div>
+          </div>
+          <button class="secondary-button w-100">CHECKOUT AS A GUEST</button>
+          <button class="secondary-button w-100">SIGN IN FOR FASTER CHECKOUT</button>
+          <button class="primary-button w-100">Checkout</button>
+        </div>
+      </div>
+      <div class="foot">
+        <p><small>Free Shipping on orders of US$ 100 or more</small></p>
+        <p><small>30 day price match guarantee</small></p>
+        <div>
+          <a href="#"><img src="./assets/images/payment-gateways/visa.png" alt=""></a>
+          <a href="#"><img src="./assets/images/payment-gateways/mastercard.png" alt=""></a>
+          <a href="#"><img src="./assets/images/payment-gateways/a-express.png" alt=""></a>
+          <a href="#"><img src="./assets/images/payment-gateways/paypal.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/scripts/app.js"></script>
+  <script>
+    Cart.populateCheckoutItems()
+  </script>
+</body>
+</html>

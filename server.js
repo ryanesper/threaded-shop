@@ -6,6 +6,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/checkout', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'checkout.html'));
+});
+
 app.get('/api/products', (req, res) => {
   res.sendFile(path.join(__dirname, 'datas/products.json'));
 });

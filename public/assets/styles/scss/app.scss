@@ -508,6 +508,143 @@ main {
       }
     }
   }
+
+  .cart {
+    padding: 40px;
+
+    .head {
+      margin-bottom: 30px;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        
+      }
+    }
+    .content {
+      display: flex;
+
+      .items {
+        flex: 2;
+        margin-right: 40px;
+
+        .label {
+          strong:last-child {
+            float: right;
+          }
+        }
+
+        .label::after, .item::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: lightgray;
+          margin: 10px 0px;
+        }
+
+        .item > div {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            padding: 0px 20px;
+          }
+
+          > div {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              margin-bottom: 5px;
+            }
+
+            .actions {
+              bottom: 0px;
+              width: 100%;
+              margin-top: auto;
+              a:not(:last-child) {
+                margin-right: 20px;
+              }
+            }
+          }
+
+          > strong {
+            margin-left: auto;
+          }
+        }
+      }
+
+      .order-summary {
+        flex: 1;
+
+        > strong {
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+
+        .estimates {
+          border: 2px solid black;
+          padding: 20px;
+          border-radius: 2px;
+
+          > div {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            p, strong {
+              flex-basis: 50%;
+              padding: 5px 0px;
+            }
+
+            :is(p, strong):nth-child(even) {
+              text-align: right;
+            }
+
+            &:last-child p {
+              text-align: center;
+              flex-basis: 100%;
+              color: red;
+            }
+          }
+
+          > div:first-child::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: lightgray;
+            margin: 20px 0px;
+          }
+        }
+
+        button, .estimates {
+          margin-top: 10px;
+        }
+
+        button {
+          border-radius: 5px;
+        }
+
+        button:not(:last-child) {
+          padding: 20px;
+        }
+
+        button:last-child {
+          border: 1px solid black;
+          font-weight: normal;
+        }
+      }
+    }
+    .foot {
+      padding: 15px 0px;
+      div {
+        margin-top: 15px;
+      }
+    }
+  }
 }
 
 /**************/
